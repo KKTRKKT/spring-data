@@ -4,6 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity // 해당 객체를 테이블에 매핑하는 애노테이션
@@ -31,6 +33,9 @@ public class Account {
             @AttributeOverride(name = "street", column = @Column(name = "home_street") ) // 컬럼을 재작성한다
     )
     private Address address;
+
+    @OneToMany // 일(account) 대 대(study) 관계
+    private Set<Study> studies = new HashSet<>();
 }
 
 

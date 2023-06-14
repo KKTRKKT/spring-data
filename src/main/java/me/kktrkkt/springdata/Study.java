@@ -15,6 +15,6 @@ public class Study {
 
     private String name;
 
-    @ManyToOne // 다(study) 대 일(account) 관계
-    private Account owner; // 변수명_id로 생성되고, 외래키로 묶인다
+//    @ManyToOne // 다(study) 대 일(account) 관계
+//    private Account owner; // 변수명_id로 생성되고, 외래키로 묶인다
 }
