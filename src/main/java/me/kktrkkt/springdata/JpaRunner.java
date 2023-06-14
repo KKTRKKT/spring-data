@@ -27,6 +27,12 @@ public class JpaRunner implements ApplicationRunner {
         // hibernate 모듈 이용가능
         final Session session = entityManager.unwrap(Session.class);
         account.setPassword("jpa");
+
+        final Study study = new Study();
+        study.setName("Spring Data JPA");
+        study.setOwner(account);
+
+        session.save(study);
         session.save(account);
     }
 }
