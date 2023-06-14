@@ -25,6 +25,12 @@ public class Account {
 
     @Transient // 컬럼 매핑 대상에서 제외시킨다
     private Boolean no;
+
+    @Embedded // composite value 사용을 위한 애노테이션
+    @AttributeOverrides ( // 다중 @AttributeOverride 선언
+            @AttributeOverride(name = "street", column = @Column(name = "home_street") ) // 컬럼을 재작성한다
+    )
+    private Address address;
 }
 
 
