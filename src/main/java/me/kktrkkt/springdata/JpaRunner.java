@@ -31,7 +31,11 @@ public class JpaRunner implements ApplicationRunner {
         final Study study = new Study();
         study.setName("Spring Data JPA");
 
-        account.getStudies().add(study);
+
+//        account.getStudies().add(study); // 종속 관계가 관계를 정의하면 안됨
+//        study.setOwner(account); // 주인 관계에서 정의할때 DB 영속화
+
+        account.addStudy(study);
 
         session.save(study);
         session.save(account);
