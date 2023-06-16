@@ -1,6 +1,5 @@
-package me.kktrkkt.springdata;
+package me.kktrkkt.springdata.relation;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 

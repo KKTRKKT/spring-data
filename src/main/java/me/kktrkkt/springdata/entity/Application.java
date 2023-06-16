@@ -1,4 +1,4 @@
-package me.kktrkkt.springdata;
+package me.kktrkkt.springdata.entity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // spring.jpa.hibernate.ddl-auto 타입 create는 데이터는 모두 사라지지만 컬럼은 정확하게 매핑됨
 // update는 데이터는 유지되지만 객체에서 속성이 삭제되도 컬럼은 삭제되도 삭제되지 않음
 @SpringBootApplication
-public class SpringDataApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringDataApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }

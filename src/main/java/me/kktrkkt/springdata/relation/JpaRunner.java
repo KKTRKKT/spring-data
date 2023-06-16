@@ -1,4 +1,4 @@
-package me.kktrkkt.springdata;
+package me.kktrkkt.springdata.relation;
 
 import org.hibernate.Session;
 import org.springframework.boot.ApplicationArguments;
