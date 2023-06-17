@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Getter @Setter
 public class SampleEntity {
 
-    @Id
+    @Id @GeneratedValue
     private Long id;
 
     @Embedded // composite value 사용을 위한 애노테이션

@@ -1,6 +1,5 @@
 package me.kktrkkt.springdata.value;
 
-import org.hibernate.Session;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;

@@ -19,7 +19,7 @@ public class SampleEntity {
     @GeneratedValue // 값 자동 생성, DB에 따라
     private Long id;
 
-    // @Column (생략) //변수명-컬럼명으로 자동 매핑됨
+     @Column(name="sampleColumn") //변수명-컬럼명으로 자동 매핑됨
     private String column;
 
     @Temporal(TemporalType.TIMESTAMP) // 날짜 컬럼을 매핑해준다

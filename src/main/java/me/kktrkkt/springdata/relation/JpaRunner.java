@@ -1,6 +1,5 @@
 package me.kktrkkt.springdata.relation;
 
-import org.hibernate.Session;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -21,23 +20,17 @@ public class JpaRunner implements ApplicationRunner {
         final Account account = new Account();
         account.setUsername("kktrkkt");
         account.setPassword("pass");
-
-        entityManager.persist(account);
-
-        // hibernate 모듈 이용가능
-        final Session session = entityManager.unwrap(Session.class);
         account.setPassword("jpa");
 
         final Study study = new Study();
         study.setName("Spring Data JPA");
-
 
 //        account.getStudies().add(study); // 종속 관계가 관계를 정의하면 안됨
 //        study.setOwner(account); // 주인 관계에서 정의할때 DB 영속화
 
         account.addStudy(study);
 
-        session.save(study);
-        session.save(account);
+        entityManager.persist(study);
+        entityManager.persist(account);
     }
 }

@@ -1,7 +1,5 @@
 package me.kktrkkt.springdata.entity;
 
-import me.kktrkkt.springdata.relation.Account;
-import me.kktrkkt.springdata.relation.Study;
 import org.hibernate.Session;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -29,5 +27,6 @@ public class JpaRunner implements ApplicationRunner {
         // hibernate 모듈로 영속화
         final Session session = entityManager.unwrap(Session.class);
         sampleEntity.setColumn("column2");
+        session.save(sampleEntity);
     }
 }
