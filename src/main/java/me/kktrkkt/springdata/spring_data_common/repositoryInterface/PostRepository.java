@@ -4,8 +4,8 @@ import org.springframework.data.repository.RepositoryDefinition;
 
 import java.util.List;
 
-@RepositoryDefinition(domainClass = Post.class, idClass = Long.class)
-public interface PostRepository {
+//@RepositoryDefinition(domainClass = Post.class, idClass = Long.class)
+public interface PostRepository extends myRepository<Post, Long>{
     Post save(Post post);
 
     List<Post> findAll();
