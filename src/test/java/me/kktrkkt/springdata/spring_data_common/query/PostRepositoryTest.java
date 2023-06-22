@@ -43,5 +43,9 @@ class PostRepositoryTest {
         assertEquals(3, post.size());
     }
 
+    @Test
+    void sqlFindByTitleContains() {
+        List<Post> post = postRepository.sqlFindByTitleContains("post");
+        assertEquals(3, post.size());
     }
 }

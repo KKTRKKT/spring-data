@@ -16,6 +16,6 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     List<Post> jpqlFindByTitleContains(@Param("title") String title);
 
     // SQL 쿼리 생성
-    @Query(value = "select * from post where like %:title%", nativeQuery = true)
+    @Query(value = "select * from post where title like %:title%", nativeQuery = true)
     List<Post> sqlFindByTitleContains(@Param("title") String title);
 }
