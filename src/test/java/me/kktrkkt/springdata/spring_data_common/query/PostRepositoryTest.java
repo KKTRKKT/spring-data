@@ -48,4 +48,10 @@ class PostRepositoryTest {
         List<Post> post = postRepository.sqlFindByTitleContains("post");
         assertEquals(3, post.size());
     }
+
+    @Test
+    void findByLikesGreaterThan() {
+        List<Post> distinctTop2 = postRepository.findTop2ByLikesGreaterThanEqual(0);
+        assertEquals(2, distinctTop2.size());
+    }
 }

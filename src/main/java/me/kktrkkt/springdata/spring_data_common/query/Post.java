@@ -15,4 +15,6 @@ public class Post {
     private Long id;
 
     private String title;
+
+    private Integer likes = 0;
 }

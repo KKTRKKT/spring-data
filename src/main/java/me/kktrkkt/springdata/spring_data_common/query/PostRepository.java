@@ -1,5 +1,6 @@
 package me.kktrkkt.springdata.spring_data_common.query;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -18,4 +19,10 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     // SQL 쿼리 생성
     @Query(value = "select * from post where title like %:title%", nativeQuery = true)
     List<Post> sqlFindByTitleContains(@Param("title") String title);
+
+    // 리턴 타입 List, Page, Slice, 등등
+
+    // likeCount 수보다 큰 포스트 중 상위 2개만 리스팅
+    List<Post> findTop2ByLikesGreaterThanEqual(int likeCount);
+
 }
