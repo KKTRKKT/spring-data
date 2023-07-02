@@ -1,4 +1,4 @@
-package me.kktrkkt.springdata.spring_data_common.domain_converter;
+package me.kktrkkt.springdata.spring_data_common.web_support.domain_converter;
 
 /*
 이 패키지에서는 도메인 컨버터에 대해 알아본다

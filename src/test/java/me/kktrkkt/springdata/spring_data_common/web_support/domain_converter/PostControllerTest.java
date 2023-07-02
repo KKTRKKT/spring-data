@@ -1,4 +1,4 @@
-package me.kktrkkt.springdata.spring_data_common.domain_converter;
+package me.kktrkkt.springdata.spring_data_common.web_support.domain_converter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
