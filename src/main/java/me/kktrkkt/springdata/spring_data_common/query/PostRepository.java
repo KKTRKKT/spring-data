@@ -13,11 +13,11 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     List<Post> findByTitleContains(String title);
 
     // JPQL 쿼리 생성
-    @Query("select p from Post as p where p.title like %:title%")
+    @Query("select p from #{#entityName} as p where p.title like %:title%")
     List<Post> jpqlFindByTitleContains(@Param("title") String title);
 
     // SQL 쿼리 생성
-    @Query(value = "select * from post where title like %:title%", nativeQuery = true)
+    @Query(value = "select * from #{#entityName} where title like %:title%", nativeQuery = true)
     List<Post> sqlFindByTitleContains(@Param("title") String title);
 
     // 리턴 타입 List, Page, Slice, 등등
