@@ -16,7 +16,7 @@ public class CustomPostRepositoryDefault implements CustomPostRepository {
     public List<Post> findByMyPost(Account account) {
         TypedQuery<Post> query = entityManager.createQuery(
                 "SELECT post " +
-                        "FROM Post AS post " +
+                        "FROM Comment AS post " +
                         "WHERE post.account.id = " + account.getId(), Post.class);
         return query.getResultList();
     }
