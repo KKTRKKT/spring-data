@@ -1,4 +1,4 @@
-package me.kktrkkt.springdata.specification;
+package me.kktrkkt.springdata.jpa_repository.specification;
 
 /*
 specification은 queryDSL과 유사한 쿼리 작성 툴이다.
